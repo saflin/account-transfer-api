@@ -1,6 +1,7 @@
 buildscript {
     ext {
         springBootVersion = '2.1.6.RELEASE'
+        lombokVersion = '1.18.10'
     }
     repositories {
         mavenCentral()
@@ -25,7 +26,10 @@ sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
 dependencies {
-    implementation("org.springframework.boot:spring-boot-starter-web")
+    implementation "org.springframework.boot:spring-boot-starter-web"
+    implementation "org.projectlombok:lombok:${lombokVersion}"
+
+    annotationProcessor "org.projectlombok:lombok:${lombokVersion}"
 }
 
 bootJar {

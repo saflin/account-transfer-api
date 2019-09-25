@@ -9,3 +9,5 @@
 .idea
 .idea/**
 .DS_Store
+build
+out
